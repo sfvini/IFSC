@@ -2,7 +2,6 @@
 
 // int main()
 // {
-
 //     float metros;
 //     int pes, polegadas;
 
@@ -20,7 +19,6 @@
 
 int main()
 {
-
     float metros;
     int pes, polegadas;
 

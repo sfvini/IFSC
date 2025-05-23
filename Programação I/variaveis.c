@@ -2,10 +2,8 @@
 
 int main()
 {
-    // Definindo as variáveis
     float altura, largura, profundidade, area, volume, preco, quantidade;
 
-    // Solicitando os dados do usuário
     printf("Entre com a altura da caixa:\n");
     scanf("%f", &altura);
 
@@ -21,12 +19,9 @@ int main()
     printf("Entre com a quantidade de caixas:\n");
     scanf("%f", &quantidade);
 
-    // Calculando a área e o volume
     area = (2 * altura * largura) + (2 * altura * profundidade) + (2 * largura * profundidade);
-
     volume = profundidade * altura * largura;
 
-    // Exibindo os resultados
     printf("A área é %.2fm² e o volume é %.3fm³\n", area, volume);
     printf("O preço por m² é R$%.2f\n", area * preco);
     printf("O preço total é R$%.2f\n", area * preco * quantidade);

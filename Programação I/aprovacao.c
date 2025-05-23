@@ -23,10 +23,20 @@ int main()
     printf("Recuperação da prova 2:\n");
     scanf("%f", &rec2);
 
+    printf("Frequência do aluno:\n");
+    scanf("%d", &freq);
+
     prova1 = fmax(rec1, p11 + p12);
     prova2 = fmax(rec2, prova2);
 
-    
+    media = (prova1 + prova2) / 2;
+    conceito = round(media);
+    aprov = (media >= 6.0) && (freq >= 75.0);
+
+    printf("A média do aluno é: %.1f\n", media);
+    printf("O conceito do aluno é: %d\n", conceito);
+    printf("A frequência do aluno é: %d%%\n", freq);
+    printf("Aprovado: %d\n", aprov);
 
     return 0;
 }
