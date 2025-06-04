@@ -5,35 +5,33 @@ int main()
     float num1, num2, res;
     char op;
 
-    printf("Escreva a operação matemática (Ex: 3 + 5): ");
+    printf("Escreva a expressão matemática (Ex: 3 + 5): ");
     scanf("%f %c %f", &num1, &op, &num2);
 
     if (op == '/' && num2 == 0)
     {
         printf("Divisão por zero não é permitida.");
+        return 1;
     }
-    else
+    switch (op)
     {
-        switch (op)
-        {
-        case '+':
-            res = num1 + num2;
-            break;
-        case '-':
-            res = num1 - num2;
-            break;
-        case '*':
-            res = num1 * num2;
-            break;
-        case '/':
-            res = num1 / num2;
-            break;
-        default:
-            printf("Operação inválida");
-            break;
-        }
-        printf("%.2f\n", res);
+    case '+':
+        res = num1 + num2;
+        break;
+    case '-':
+        res = num1 - num2;
+        break;
+    case '*':
+        res = num1 * num2;
+        break;
+    case '/':
+        res = num1 / num2;
+        break;
+    default:
+        printf("Operação inválida");
+        break;
     }
+    printf("%.2f\n", res);
 
     return 0;
 }
