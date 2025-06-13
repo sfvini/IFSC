@@ -1,9 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 int main()
 {
     int num, palpite, tentativas = 0;
+
+    srand(time(NULL));
     num = 1 + rand() % 100;
 
     do
@@ -13,7 +16,10 @@ int main()
 
         tentativas++;
 
-        palpite > num ? printf("O número sorteado é menor\n") : printf("O número sorteado é maior\n");
+        if (palpite > num)
+            printf("O número sorteado é menor\n");
+        else if (palpite < num)
+            printf("O número sorteado é maior\n");
 
     } while (num != palpite);
 
