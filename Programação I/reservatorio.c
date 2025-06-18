@@ -2,21 +2,20 @@
 
 int main()
 {
-
     int cap = 400, l, dt;
 
-    for (int i = 1; i <= 7; i++)
+    for (int i = 0; i <= 7; i++)
     {
+        dt = i;
         if (cap <= 0)
         {
-            dt = i;
             break;
         }
         else
         {
-            printf("Entre com a quantidade de chuva no dia %d em litros: ", i);
+            printf("Entre com a quantidade de chuva no dia %d em litros: ", i + 1);
             scanf("%d", &l);
-            cap = cap - l;
+            cap -= l;
         }
     }
 
