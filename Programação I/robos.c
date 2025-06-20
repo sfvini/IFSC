@@ -7,6 +7,7 @@ typedef struct
 
 void mover(Ponto *p, char direcao, float distancia)
 {
+    
 
     switch (direcao)
     {
@@ -29,7 +30,6 @@ void mover(Ponto *p, char direcao, float distancia)
 
 float distancia(Ponto p1, Ponto p2)
 {
-
 }
 
 int main()
@@ -41,13 +41,13 @@ int main()
     float distancia;
 
     printf("Entre com os movimentos do robô 1: ");
-    scanf(" %c %f  %c %f  %c %f", &direcao, &distancia, &direcao, &distancia, &direcao, &distancia);
+    scanf(" %c %f", &direcao, &distancia);
 
     mover(&p1, direcao, distancia);
     printf("Posição final do robô 1: (%f,%f)\n", p1);
 
     printf("Entre com os movimentos do robô 2: ");
-    scanf(" %c %f %c %f %c %f", &direcao, &distancia, &direcao, &distancia, &direcao, &distancia);
+    scanf(" %c %f", &direcao, &distancia);
 
     mover(&p2, direcao, distancia);
     printf("Posição final do robô 1: (%f,%f)\n", p2);
