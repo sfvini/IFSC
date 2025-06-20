@@ -17,7 +17,6 @@ int main()
     printf("Digite o ângulo (graus): ");
     scanf("%f", &medidas.angulo);
 
-
     float area = medidas.lado1 * medidas.lado2 * sin(medidas.angulo * M_PI / 180);
     float perimetro = 2 * (medidas.lado1 + medidas.lado2);
     printf("Área: %.2f\n", area);
