@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 
 typedef struct
 {
@@ -7,29 +8,29 @@ typedef struct
 
 void mover(Ponto *p, char direcao, float distancia)
 {
-    
-
     switch (direcao)
     {
     case 'N':
-        p->x += distancia;
-        break;
-    case 'S':
-        p->x -= distancia;
-        break;
-    case 'L':
         p->y += distancia;
         break;
-    case 'O':
+    case 'S':
         p->y -= distancia;
         break;
+    case 'L':
+        p->x += distancia;
+        break;
+    case 'O':
+        p->x -= distancia;
+        break;
     default:
+        printf("Direção inválida: %c\n", direcao);
         break;
     }
 }
 
 float distancia(Ponto p1, Ponto p2)
 {
+    return sqrt((p1.x - p2.x) * (p1.x - p2.x) + (p1.y - p2.y) * (p1.y - p2.y));
 }
 
 int main()
@@ -37,20 +38,26 @@ int main()
     Ponto p1 = {0, 0};
     Ponto p2 = {10, 10};
 
-    char direcao;
-    float distancia;
+    char dir;
+    float dis;
 
     printf("Entre com os movimentos do robô 1: ");
-    scanf(" %c %f", &direcao, &distancia);
-
-    mover(&p1, direcao, distancia);
-    printf("Posição final do robô 1: (%f,%f)\n", p1);
+    for (int i = 0; i < 3; i++)
+    {
+        scanf(" %c %f", &dir, &dis);
+        mover(&p1, dir, dis);
+    }
 
     printf("Entre com os movimentos do robô 2: ");
-    scanf(" %c %f", &direcao, &distancia);
+    for (int i = 0; i < 3; i++)
+    {
+        scanf(" %c %f", &dir, &dis);
+        mover(&p2, dir, dis);
+    }
 
-    mover(&p2, direcao, distancia);
-    printf("Posição final do robô 1: (%f,%f)\n", p2);
+    printf("Posição final do robô 1: (%.1f,%.1f)\n", p1.x, p1.y);
+    printf("Posição final do robô 2: (%.1f,%.1f)\n", p2.x, p2.y);
+    printf("Distância entre os robôs: %f\n", distancia(p1, p2));
 
     return 0;
 }
