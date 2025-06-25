@@ -6,7 +6,7 @@ typedef struct
 } Estatisticas;
 
 Estatisticas calculos(int n, float a[]){
-
+    
 }
 
 
@@ -24,9 +24,9 @@ int main()
     for (int i = 0; i < ne; i++)
     {
         scanf("%f", &elem[i]);
-        
     }
     
+    Estatisticas e = calculos(ne, elem);
 
     return 0;
 }
