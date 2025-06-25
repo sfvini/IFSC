@@ -5,7 +5,13 @@ typedef struct
     float media, min, max;
 } Estatisticas;
 
-Estatisticas calculos(int n, float a[]){
+Estatisticas calculos(int ne, float e[]){
+    Estatisticas info = ;
+
+    for (int i = 0; i < ne; i++)
+    {
+        
+    }
     
 }
 
