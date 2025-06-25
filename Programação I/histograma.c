@@ -4,7 +4,6 @@
 
 int main()
 {
-
     srand(time(NULL));
     int res, d1, d2, rol;
     float hist[11] = {};

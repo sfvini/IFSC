@@ -2,7 +2,6 @@
 
 int main()
 {
-
     float peso, imc, altura;
 
     printf("Peso: ");
