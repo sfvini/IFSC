@@ -1,4 +1,4 @@
-// #include <stdio.h>
+#include <stdio.h>
 
 // // fahrenheit.c
 // // int main()
@@ -14,6 +14,8 @@
 
 // //     return 0;
 // // }
+
+
 
 // // ean13.c
 // int main()
@@ -39,3 +41,6 @@
 
 //     return 0;
 // }
+
+
+

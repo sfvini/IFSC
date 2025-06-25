@@ -14,7 +14,7 @@ int main()
     for (int i = 0; i < NUM_TAXAS; i++) {
         valor[i] = VALOR_INICIAL;
         taxa[i] = (TAXA_INICIAL + i * PASSO_TAXA) / 100.0;
-        printf("   %.2f%%", 100.0 * taxa[i]);
+        printf("    %.1f%%", 100.0 * taxa[i]);
     }
     printf("\n");
 

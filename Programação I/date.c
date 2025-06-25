@@ -2,7 +2,6 @@
 
 int main()
 {
-
     int dia, mes, ano;
     char *m;
     char *d;

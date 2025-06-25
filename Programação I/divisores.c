@@ -2,7 +2,6 @@
 
 int main()
 {
-
     int n, d = 0;
 
     printf("Entre com um inteiro positivo: ");
