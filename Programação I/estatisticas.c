@@ -23,7 +23,8 @@ int main()
     printf("Entre com os elementos: ");
     for (int i = 0; i < ne; i++)
     {
-        scanf("%f", )
+        scanf("%f", &elem[i]);
+        
     }
     
 
