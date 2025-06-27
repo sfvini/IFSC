@@ -3,14 +3,14 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define MAX 52
+#define VALORES 13
+#define NAIPES 4
 
 int main()
 {
-    char mao[MAX][MAX];
-    int sortN, sortV;
-    char naipes[MAX] = {'e', 'c', 'o', 'p'};
-    char valores[MAX] = {
+    int sortN, sortV, n;
+    char naipes[] = {'e', 'c', 'o', 'p'};
+    char valores[] = {
         'A',
         '2',
         '3',
@@ -25,21 +25,27 @@ int main()
         'Q',
         'K',
     };
-    bool sorteada[MAX][MAX];
-    int n;
+
+    bool sorteada[VALORES][NAIPES] = {};
+
+    srand(time(NULL));
 
     printf("Entre com o número de cartas: ");
     scanf("%d", &n);
 
-    srand(time(NULL));
-
-    for (int i = 0; i < n; i++)
+    printf("Mão sorteada:");
+    while (n > 0)
     {
-        sortN = rand() % 4;
-        sortV = rand() % 13;
-
-        
+        sortV = rand() % VALORES;
+        sortN = rand() % NAIPES;
+        if (!sorteada[sortV][sortN])
+        {
+            printf(" %c%c", valores[sortV], naipes[sortN]);
+            sorteada[sortV][sortN] = true;
+            n--;
+        }
     }
+    printf("\n");
 
     return 0;
 }

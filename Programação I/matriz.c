@@ -4,7 +4,6 @@
 
 int main()
 {
-
     int linhas, colunas;
     int matriz[MAX][MAX];
     float media;
