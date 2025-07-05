@@ -632,64 +632,65 @@
 // }
 
 // si.c
-#include <stdio.h>
-#include <stdbool.h>
-bool prefixo(float x, char *p, float *y)
-{
-    if (x >= 1e9)
-    {
-        *y = x / 1e9;
-        *p = 'G';
-    }
-    else if (x >= 1e6)
-    {
-        *y = x / 1e6;
-        *p = 'M';
-    }
-    else if (x >= 1e3)
-    {
-        *y = x / 1e3;
-        *p = 'k';
-    }
-    else if (x >= 1)
-    {
-        *y = x;
-        *p = ' ';
-    }
-    else if (x >= 1e-3)
-    {
-        *y = x * 1e3;
-        *p = 'm';
-    }
-    else if (x >= 1e-6)
-    {
-        *y = x * 1e6;
-        *p = 'u';
-    }
-    else if (x >= 1e-9)
-    {
-        *y = x * 1e9;
-        *p = 'n';
-    }   
-    else
-    {
-        return false;
-    }
-    return true;
-}
-int main()
-{
-    float x, y;
-    char p;
-    printf("Entre com um número real: ");
-    scanf("%f", &x);
-    if (prefixo(x, &p, &y))
-    {
-        printf("Representação com prefixo: %g%c\n", y, p);
-    }
-    else
-    {
-        printf("Número fora do intervalo\n");
-    }
-    return 0;
-}
+// #include <stdio.h>
+// #include <stdbool.h>
+// bool prefixo(float x, char *p, float *y)
+// {
+// if (x >= 1e9)
+// {
+// *y = x / 1e9;
+// *p = 'G';
+// }
+// else if (x >= 1e6)
+// {
+// *y = x / 1e6;
+// *p = 'M';
+// }
+// else if (x >= 1e3)
+// {
+// *y = x / 1e3;
+// *p = 'k';
+// }
+// else if (x >= 1)
+// {
+// *y = x;
+// *p = ' ';
+// }
+// else if (x >= 1e-3)
+// {
+// *y = x * 1e3;
+// *p = 'm';
+// }
+// else if (x >= 1e-6)
+// {
+// *y = x * 1e6;
+// *p = 'u';
+// }
+// else if (x >= 1e-9)
+// {
+// *y = x * 1e9;
+// *p = 'n';
+// }
+// else
+// {
+// return false;
+// }
+// return true;
+// }
+// int main()
+// {
+// float x, y;
+// char p;
+// printf("Entre com um número real: ");
+// scanf("%f", &x);
+// if (x < 1e-9 || x >= 1e12)
+// {
+// printf("Número fora do intervalo\n");
+// }
+// else
+// {
+// prefixo(x, &p, &y);
+// printf("Representação com prefixo: %g%c\n", y, p);
+// }
+// return 0;
+// }
