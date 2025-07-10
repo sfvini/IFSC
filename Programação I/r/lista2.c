@@ -1,44 +1,59 @@
-// collatz.c
-#include <stdio.h>
+// // collatz.c
+// #include <stdio.h>
+// int main()
+// {
+// long long termo;
+// int passos = 0;
+// printf("Entre com o termo inicial: ");
+// scanf("%lld", &termo);
+// if (termo != 1)
+// {
+// printf("Sequência de Collatz: [%lld, ", termo);
+// while (termo > 1)
+// {
+// if (termo % 2 == 0)
+// {
+// termo /= 2;
+// }
+// else
+// {
+// termo = termo * 3 + 1;
+// }
+// printf("%lld", termo);
+// if (termo != 1)
+// {
+// printf(", ");
+// }
+// passos++;
+// }
+// printf("]\n");
+// printf("Número de passos: %d\n", passos);
+// }
+// else
+// {
+// printf("Sequência de Collatz: [1]\n");
+// printf("Número de passos: 0\n");
+// }
+// return 0;
+// }
 
-int main()
-{
+// palavras.c
+// #include <stdio.h>
+// int main()
+// {
+// char cat, can = ' ';
+// int qnt = 0;
+// printf("Entre com um texto: ");
+// do
+// {
+// scanf("%c", &cat);
+// if (cat != ' ' && cat != '\n' && can == ' ')
+// {
+// qnt++;
+// }
+// can = cat;
+// } while (cat != '\n');
+// printf("Número de palavras: %d\n", qnt);
+// return 0;
+// }
 
-    long long termo;
-    int passos = 0;
-
-    printf("Entre com o termo inicial: ");
-    scanf("%lld", &termo);
-
-    if (termo != 1)
-    {
-        printf("Sequência de Collatz: [%lld, ", termo);
-
-        while (termo > 1)
-        {
-            if (termo % 2 == 0)
-            {
-                termo /= 2;
-            }
-            else
-            {
-                termo = termo * 3 + 1;
-            }
-            printf("%lld", termo);
-            if (termo != 1)
-            {
-                printf(", ");
-            }
-            passos++;
-        }
-        printf("]\n");
-        printf("Número de passos: %d\n", passos);
-    }
-
-    else
-    {
-        printf("Sequência de Collatz: [1]\n");
-        printf("Número de passos: 0\n");
-    }
-    return 0;
-}
