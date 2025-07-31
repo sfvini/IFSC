@@ -111,3 +111,63 @@
 // printf("Nível necessário: %d\n", nm);
 // return 0;
 // }
+
+// acesso.c
+// #include <stdio.h>
+// #define TENTATIVAS 3
+// #define SENHA 314159
+// int main()
+// {
+// int t = TENTATIVAS, senha;
+// while (t > 0)
+// {
+// printf("Entre com a senha: ");
+// scanf("%d", &senha);
+// if (senha == SENHA)
+// {
+// printf("Acesso autorizado\n");
+// break;
+// }
+// else
+// {
+// printf("Acesso negado (senha incorreta)\n");
+// t--;
+// }
+// }
+// if (t == 0)
+// {
+// printf("Sistema bloqueado\n");
+// }
+// return 0;
+// }
+
+// maior.c
+// #include <stdio.h>
+// int main()
+// {
+// int num_maior = 0, qnt = 0, n;
+// printf("Entre com inteiros positivos. Entre com 0 ou um inteiro negativo para terminar.\n");
+// do
+// {
+// printf("> ");
+// scanf(" %d", &n);
+// if (n > num_maior)
+// {
+// num_maior = n;
+// qnt = 1;
+// }
+// else if (n == num_maior)
+// {
+// qnt++;
+// }
+// } while (n > 0);
+// if (qnt == 1)
+// {
+// printf("O maior inteiro foi %d, que ocorreu apenas uma vez.\n", num_maior);
+// }
+// else
+// {
+// printf("O maior inteiro foi %d, que ocorreu %d vezes.\n", num_maior, qnt);
+// }
+// return 0;
+// }
