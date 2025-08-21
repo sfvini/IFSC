@@ -13,15 +13,15 @@ int ex_1()
 
 //Exercício 2
 int ex_2()
+int ex_2()
 {
-    int *ptr = 0;
-    int v[5] = {10, 20, 30, 40, 50};
+    int *ptr;
+    int v[] = {10, 20, 30, 40, 50};
 
     printf("Exercício 2:");
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < sizeof(v)/sizeof(v[i]); i++)
     {
-        ptr = &v[i];
-        printf(" %d", *ptr);
+        printf(" %d", *(v + i));
     }
     printf("\n");
     return 0;
