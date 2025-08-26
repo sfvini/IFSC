@@ -13,7 +13,6 @@ int ex_1()
 
 //Exercício 2
 int ex_2()
-int ex_2()
 {
     int *ptr;
     int v[] = {10, 20, 30, 40, 50};
